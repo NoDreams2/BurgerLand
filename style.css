@@ -332,7 +332,7 @@ img {
 .feedback_text {
     margin: 0;
     text-align: center;
-    width: 370px;
+    max-width: 370px;
 }
 
 .feedback_text::before {
@@ -369,6 +369,7 @@ img {
 .download .container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .download__title {
@@ -446,6 +447,121 @@ img {
 .footer__link-web::before {
     content: url("./images/icons/global.svg");
 }
+
+@media (max-width: 1119px) {
+    .welcome__desc {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 950px) {
+    .order .container {
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .order .text {
+        text-align: center;
+    }
+
+    .order .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .food-list .container {
+        justify-content: space-evenly;
+    }
+
+    .footer .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:  "nav nav"
+                          "contacts socials";
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .footer__contacts {
+        grid-area: contacts;
+        justify-self: end;
+    }
+
+    .footer__nav {
+        grid-area: nav;
+    }
+
+    .footer__socials {
+        grid-area: socials;
+        align-self: center;
+        justify-self: start;
+    }
+
+    .footer__list {
+        gap: 20px;
+    }
+
+    .feedback {
+        padding-bottom: 100px;
+    }
+
+    .footer {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .header .btn {
+        display: none;
+    }
+
+    .feedback__img {
+        width: 200px;
+    }
+
+    .download__title {
+        font-size: 20px;
+    }
+
+    .welcome {
+        padding: 200px 0 100px ;
+        min-height: auto;
+    }
+
+    .welcome__text {
+        width: 100%;
+    }
+
+    .welcome__title {
+        font-size: 40px;
+    }
+
+    .welcome__desc {
+        margin: 20px 0;
+    }
+
+    .product {
+        padding: 60px 0 100px;
+    }
+}
+
+
+/*.header .container {*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*}*/
+
+/*.header__list {*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    gap: 10px;*/
+/*}*/
+
+/*.welcome {*/
+/*    margin-top: -239px;*/
+/*}*/
 
 
 
